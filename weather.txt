@@ -1,0 +1,46 @@
+    Steps involved creating this weather app :-
+(1). Create a folder for your project named as "weather_app".
+(2). Now, right click on folder created and click on "open with code" option.
+(3). Vs-code window will appear before you. In vscode window, open "Explorer" and add a file named as "weather.py".
+(4). The file will be opened and now we need to write the code for your "weather app" inside "weather.py" file.
+(5). First and important step of python code is to import required module.
+(6). Import tkinter module.
+(7). import requests module.
+(8). import time module.
+(9). from tkinter module import all, code is as :- from tkinter import *
+(10). Define a function named 'getWeather' and pass argument as 'canvas', Here canvas is the name for parent window.
+(11). Now inside the function body you need to declare a variable as 'city' with value assigned as 'textfield.get()' method.
+(12). Declare 'api' variable and assign the value as of link of api copied from browser including api key which is present in corresponding api website.
+(13). Declare 'json_data' variable and assign value as :- requests.get(api).json().
+(14). Declare 'condition' variable and assign value as :- json_data['weather'][0]['main'].
+(15). Declare 'temp' variable and assign value as int(json_data['main']['temp'] - 273.15).
+(17). Declare 'min_temp' variable and assign value as int(json_data['main']['temp_min'] - 273.15).
+(18). Declare 'max_temp' variable and assign value as int(json_data['main']['temp_max'] - 273.15).
+(19). Declare 'pressure' variable and assign value as json_data['main']['pressure'].
+(20). Declare 'humidity' variable and assign value as json_data['main']['humidity'].
+(21). Declare 'wind' variable and assign value as json_data['wind']['speed'].
+(22). Declare 'sunrise' variable and assign value as time.strftime("%I:%M:%S", time.gmtime(json_data['sys']['sunrise']- 21600)).
+(23). Declare 'sunset' variable and assign value as time.strftime("%I:%M:%S", time.gmtime(json_data['sys']['sunset']- 21600)).
+(24). Declare 'final_info' variable and assign value as condition + "\n" + str(temp) + "°C".
+(25). Declare 'final_data' variable and assign value as "\n" + "Max Temp: " + str(max_temp) + "\n" + "Min Temp: " + str(min_temp) + "\n" + "Pressure: " + str(pressure) + "\n" + "Humidity: " + str(humidity) + "\n" + "Wind Speed: " + str(wind) + "\n" + "Sunrise: " + sunrise + "\n" + "Sunset: " + sunset.
+(26). Now, we need to configure 'label1' and pass argument as 'text= final_info'.
+(27). Configure 'label2' and pass argument as 'text= final_date'.
+(28). 
+(29). 
+(30). 
+(31). 
+(32). 
+(33). 
+(34). 
+(35). 
+(36). 
+(37). 
+(38). 
+(39). 
+(40). 
+(41). 
+(42). 
+(43). 
+
+
+
